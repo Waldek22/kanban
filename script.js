@@ -26,14 +26,15 @@ $(function() {
 			$columnAddCard.click(function() {
 				self.addCard(new Card(prompt('Wpisz nazwę karty.')));
 			});
-		};
-		
-		$column.append($columnTitle)
+			$column.append($columnTitle)
 			.append($columnDelete)
 			.append($columnAddCard)
 			.append($columnCardList);
 			
-		return $column;
+			return $column;
+		};
+		
+		
 		
 	}
 	Column.prototype = {
@@ -95,21 +96,17 @@ $(function() {
  				board.addColumn(column);
  			});
 
- 	// TWORZENIE KOLUMN
 	var todoColumn = new Column('Do zrobienia');
 	var doingColumn = new Column('W trakcie');
 	var doneColumn = new Column('Skończone');
 
-// DODAWANIE KOLUMN DO TABLICY
 	board.addColumn(todoColumn);
 	board.addColumn(doingColumn);
 	board.addColumn(doneColumn);
 
-// TWORZENIE NOWYCH EGZEMPLARZY KART
 	var card1 = new Card('Nowe zadanie');
 	var card2 = new Card('Stworzyc tablice kanban');
 
-// DODAWANIE KART DO KOLUMN
 	todoColumn.addCard(card1);
 	doingColumn.addCard(card2);		
 });
