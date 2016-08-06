@@ -32,11 +32,9 @@ $(function() {
 			.append($columnCardList);
 			
 			return $column;
-		};
-		
-		
-		
+		};	
 	}
+	
 	Column.prototype = {
 		addCard: function(Card) {
 			this.$element.children('ul').append(card.$element);
