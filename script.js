@@ -34,9 +34,9 @@ $(function() {
 			return $column;
 		};	
 	}
-	
+
 	Column.prototype = {
-		addCard: function(Card) {
+		addCard: function(card) {
 			this.$element.children('ul').append(card.$element);
 		},
 		removeColumn: function() {
@@ -44,7 +44,7 @@ $(function() {
 		}
 	};
 
-	function Card() {
+	function Card(description) {
 		var self = this;
 		this.id = randomString();
 		this.description = description;
@@ -76,7 +76,7 @@ $(function() {
 			this.$element.append(column.$element);
 			initSortable();
 		},
-		element: $('#board .column-container')
+		$element: $('#board .column-container')
 		
 	}
 
