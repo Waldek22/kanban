@@ -82,7 +82,7 @@ $(function() {
 
 	function initSortable() {
 	    $('.card').sortable({
-	      connectWith: '.card-list',
+	      connectWith: '.column-card-list',
 	      placeholder: 'card-placeholder'
 	    }).disableSelection();
 	}
