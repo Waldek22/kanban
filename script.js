@@ -81,7 +81,7 @@ $(function() {
 	}
 
 	function initSortable() {
-	    $('.card-list').sortable({
+	    $('.card').sortable({
 	      connectWith: '.card-list',
 	      placeholder: 'card-placeholder'
 	    }).disableSelection();
